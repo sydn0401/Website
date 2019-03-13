@@ -11,6 +11,7 @@
         font-size: 60px;
         font-family: Helvetica, Arial, sans-serif;
         position: relative;
+        animation-delay: 2s;
         animation: fade_in 2s ease-out;
       }
       p {
@@ -25,7 +26,8 @@
         font-size: 20px;
         color: yellow; 
       }
-
+      
+      /* yellow block */
       .container{
         /*padding: 20px;*/
         /*animation-delay: 2s;*/
@@ -37,6 +39,8 @@
           animation: floating_block 2s infinite alternate ease-in-out;      
           border-radius: 30px;
       }
+      
+      /* text in the yellow block */
       text {
         font-weight: lighter;
         font-size: 15px;
@@ -46,29 +50,23 @@
         /*margin-right: -50%;*/
         transform: translate(-50%, -50%)
       }
-      /*#div {animation-timing-function: ease-in-out;}*/
       
-      /* div motion */
+      /* title motion */
      @keyframes fade_in { 
         0% {color: black; top: 50px;}
         100% { top: 0px;}
       }
+      /* yellow block motion */
       @keyframes floating_block {
         50% {/*background-color: black;*/ width: 200px; height: 25px;}
         from {left: 0%;}
         to {left: 90%;}
-        /*
-          0%   {background-color:red; left:0px; top:0px;}
-          25%  {background-color:yellow; left:200px; top:0px;}
-          50%  {background-color:blue; left:200px; top:200px;}
-          75%  {background-color:green; left:0px; top:200px;}
-          100% {background-color:red; left:0px; top:0px;}
-        */
       }
       img.displayed {
-         display: block;
-         margin-left: auto;
-         margin-right: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
       }
     </style>
   </head>
@@ -77,9 +75,10 @@
     <div class="container"><text>Loading...</text></div>
     <p> Less is more </p>
     <p> Make a list for the things you love. </p>
-    <p> <a href = "https://www.youtube.com/user/PewDiePie"> Sub 2 Pewdiepie! </a> </p>
-    <p> <a href = "https://minimalissimo.com/"> Minimalissimo </a></p>
-    <img class="displayed" src = "https://minimalissimo.com/cms/wp-content/uploads/2019/03/strie-chair-2.jpg" alt = "Minimalissimo">
-  
+    <p><a href = "https://www.youtube.com/user/PewDiePie"> Sub 2 Pewdiepie! </a></p>
+    <p><a href = "https://minimalissimo.com/"> Minimalissimo </a></p>
+    <a href = "https://minimalissimo.com/">
+      <img class="displayed" src = "https://minimalissimo.com/cms/wp-content/uploads/2019/03/strie-chair-2.jpg" alt = "Minimalissimo">
+    </a>
   </body>
 </html>
