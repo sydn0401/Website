@@ -10,6 +10,8 @@
         font-weight: 100;
         font-size: 60px;
         font-family: Helvetica, Arial, sans-serif;
+        position: relative;
+        animation: fade_in 2s ease-in-out;
       }
       p {
         text-align: center;
@@ -52,10 +54,9 @@
       /*#div {animation-timing-function: ease-in-out;}*/
       
       /* div motion */
-      @keyframes h1{ 
-        0% {background-color: black;}
-        from {top: 10%;}
-        to {top: 0%;}
+     @keyframes fade_in { 
+        0% {color: black; top: 50px;}
+        100% { top: 0px;}
       }
       @keyframes floating_block {
         50% {/*background-color: black;*/ width: 200px; height: 25px;}
