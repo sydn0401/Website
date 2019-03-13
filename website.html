@@ -23,9 +23,43 @@
         font-size: 20px;
         color: yellow; 
       }
-      a:after {
-        font-size: 15px;
-        color: green;
+
+      div {
+        /*padding: 20px;*/
+        /*animation-delay: 2s;*/
+          width: 80px;
+          height: 40px;
+          background-color: yellow;
+          position: relative;
+          animation: floating_block 2s infinite alternate ease-in-out;
+        /*
+                animation-name: floating_block;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        */
+  /*animation-direction: alternate;*/
+          border-radius: 30px;
+      }
+      text {
+        font-weight: lighter;
+        position: relative;
+        top: 30%;
+        left: 25%;
+      }
+      /*#div {animation-timing-function: ease-in-out;}*/
+      
+      /* div motion */
+      @keyframes floating_block {
+        50% {background-color: black;}
+        from {left: 0px;}
+        to {left: 1440px;}
+        /*
+          0%   {background-color:red; left:0px; top:0px;}
+          25%  {background-color:yellow; left:200px; top:0px;}
+          50%  {background-color:blue; left:200px; top:200px;}
+          75%  {background-color:green; left:0px; top:200px;}
+          100% {background-color:red; left:0px; top:0px;}
+        */
       }
     </style>
   </head>
@@ -34,6 +68,7 @@
     <p> Less is more </p>
     <p> Make a list for the things you love. </p>
     <p> <a href = "https://www.youtube.com/user/PewDiePie"> Sub 2 Pewdiepie! </a> </p>
+    <div><text>Loading...</text></div>
     <img src = "Minimalism.JPG" alt = "Decor of FunFunTown">
   
   </body>
