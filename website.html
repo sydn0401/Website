@@ -4,80 +4,83 @@
     <title> Minimalism </title>
     <style>
       h1 {
-        color: white;
-        text-align: center;
-        text-transform: capitalize;
-        font-weight: 100;
-        font-size: 160px;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        position: relative;
-        animation-delay: 2s;
-        animation: fade_in 2s ease-out;
+                 top: -50px;
+               color: white;
+          text-align: center;
+         font-weight: 100;
+           font-size: 160px;
+         font-family: Helvetica Neue, Arial, sans-serif;
+            position: relative;
+     animation-delay: 2s;
+           animation: fade_in 2s ease-out;
       }
+      
       p {
-        text-align: center;
-        color: white;
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-size: 50px;
-        font-weight: 100;
+          text-align: center;
+               color: white;
+         font-family: Helvetica Neue, Arial, sans-serif;
+           font-size: 30px;
+         font-weight: 100;
         }
+      
       a { color: white; }
       a:hover { 
-        font-size: 60px;
-        color: yellow; 
+           font-size: 20px;
+               color: yellow; 
+      }
+
+      .yellow_toggle{
+                 top: 320px;
+               width: 80px;
+              height: 40px;
+             display: block;
+    background-color: yellow; /*warm #f7f5e7*/
+            position: absolute;
+           animation: floating_block 2s infinite alternate ease-in-out;
+       border-radius: 30px;
+             padding: 4px;
       }
       
-      /* yellow block */
-      .container{
-          top: 320px;
-          width: 80px;
-          height: 40px;
-          background-color: yellow;
-          position: absolute;
-          animation: floating_block 2s infinite alternate ease-in-out;      
-          border-radius: 30px;
-          padding: 4px;
-      }
-      
-      /* text in the yellow block */
       text {
-        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-        font-weight: lighter;
-        font-size: 15px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        /*margin-right: -50%;*/
-        transform: translate(-50%, -50%)
+         font-weight: lighter;
+           font-size: 15px;
+            position: absolute;
+                 top: 50%;
+                left: 50%;
+           transform: translate(-50%, -50%);
       }
       
-      /* title motion */
-     @keyframes fade_in { 
-        0% {opacity: 0; top: 50px;}
-        100% { top: 0px;}
-      }
-      /* yellow block motion */
-      @keyframes floating_block {
-        50% { width: 200px; height: 25px;}
-        from {left: 0%;}
-        to {left: 100%;}
-      }
       img.displayed {
-        display: block;
-        margin-left: auto;
+             display: block;
+               width: 100%;
+         margin-left: auto;
         margin-right: auto;
-        width: 100%;
       }
+      
+      /* div motion */
+     @keyframes fade_in { 
+        0%   { opacity: 0;
+               top: 80px; }
+        100% { top: -50px; }
+      }
+      
+      @keyframes floating_block {
+        50%  { width: 220px; 
+               height: 20px; }
+        from { left: 0%; }
+        to   { left: 95%; }
+      }      
+      
     </style>
   </head>
   <body bgcolor = "black">
     <h1> Minimalism </h1>
-    <div class="container"><text>Loading...</text></div>
+    <div class = "yellow_toggle" ><text>Loading...</text></div>
     <p> Less is more </p>
     <p> Make a list for the things you love. </p>
-    <p><a href = "https://minimalissimo.com/"> Minimalissimo </a></p>
-    <a href = "https://minimalissimo.com/">
-      <img class="displayed" src = "https://minimalissimo.com/cms/wp-content/uploads/2019/03/strie-chair-2.jpg" alt = "Minimalissimo">
-    </a>
+    <p><a href = "https://minimalissimo.com/" > Minimalissimo </a></p> 
+    <img class = "displayed" 
+         src = "https://minimalissimo.com/cms/wp-content/uploads/2019/03/strie-chair-2.jpg" 
+         alt = "Minimalissimo" > 
   </body>
 </html>
