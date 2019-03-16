@@ -42,7 +42,7 @@
       }
       
       text {
-             display: block; /**/
+             display: block; /* useless */
          font-weight: lighter;
            font-size: 15px;
             position: absolute;
@@ -69,7 +69,8 @@
         50%  { width: 220px; 
                height: 20px; }
         from { left: 0%; }
-        to   { left: 95%; }
+        to   { left: 100%; 
+        transform: translate(-100%); }
       }      
       
     </style>
