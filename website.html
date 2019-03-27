@@ -98,11 +98,6 @@
          src = "https://minimalissimo.com/cms/wp-content/uploads/2019/03/strie-chair-2.jpg" 
          alt = "Minimalissimo" > 
     </a>
-    <a href = "https://www.funfuntown.com/" >
-    <img class = "displayed" 
-         src = "Minimalism.jpg" 
-         alt = "funfuntown" > 
-    </a>
   </body>
   
   <script>
@@ -111,7 +106,7 @@ dragElement(document.getElementById("yellow_toggle"));
 
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-  elmnt.onmousedown = dragMouseDown;
+  document.onmousedown = dragMouseDown;
   
   function dragMouseDown(e) {
     e = e || window.event;
