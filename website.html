@@ -24,18 +24,13 @@
          font-weight: 100;
         }
       
-      .line1 {
-      animation-delay: 2s;
-      animation: fade_in 1s ease-out;
-      }
-      
       a { color: white; }
       a:hover { 
            font-size: 20px;
                color: yellow; 
       }
 
-      .yellow_toggle {
+      #yellow_toggle {
                  top: 280px;
                width: 80px;
               height: 40px;
@@ -47,7 +42,7 @@
              padding: 4px;
       }
       
-      .yellow_toggle:active {
+      #yellow_toggle:active {
         animation-play-state: paused;
       }
       
@@ -89,7 +84,7 @@
   
   <body bgcolor = "#f7f5e7">
     <h1> Minimalism </h1>
-    <div class = "yellow_toggle" ><text>Loading...</text></div>
+    <div id = "yellow_toggle" ><text>Loading...</text></div>
     <p> Less is more </p>
     <p> Make a list for the things you love. </p>
     <p> Minimalissimo </p>
@@ -138,7 +133,10 @@
   	  }
   
   	  elmnt.onmousedown = dragMouseDown;
- 
+      
+      function togglePlayState(newState) {
+        document.getElementById("yellow_toggle").style.animationPlayState = newState;
+      }
   }
   </script>
 </html>
