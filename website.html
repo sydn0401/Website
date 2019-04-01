@@ -48,11 +48,15 @@
     background-color: yellow; /*warm #f7f5e7*/
             position: absolute;
            animation: floating_block 1.5s infinite alternate ease-in-out;
+          box-shadow: 5px 5px 12px #000;
        border-radius: 30px;
              padding: 4px;
+          transition: all 0.5s;
       }
       
       #yellow_toggle:active {
+        opacity: 0.6;
+        box-shadow: 20px 20px 25px #000;
         animation-play-state: paused;
       }
       
