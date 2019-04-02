@@ -47,6 +47,18 @@
                color: yellow; 
       }
 
+      img {
+             display: block;
+               width: 80%;
+              margin: auto;
+          box-shadow: 3px 3px 3px #888;
+          transition: box-shadow 0.5s;
+      }
+      
+      img: hover {
+          box-shadow: 15px 15px 20px #888;
+      }
+      
       #yellow_toggle {
                  top: 280px;
                width: 80px;
@@ -89,13 +101,6 @@ animation-play-state: paused;
         position: relative;
         text-align: center;
         color: white;
-      }
-      
-      .displayed {
-             display: block;
-               width: 80%;
-              margin: auto;
-          box-shadow: 15px 15px 20px #888;
       }
       
       .blend {
@@ -146,9 +151,8 @@ animation-play-state: paused;
     
     <div class = "container">
       <a href = "https://minimalissimo.com/" >
-        <img class = "displayed" 
-          src = "https://minimalissimo.com/cms/wp-content/uploads/2019/03/strie-chair-2.jpg" 
-          alt = "Minimalissimo" > 
+        <img src = "https://minimalissimo.com/cms/wp-content/uploads/2019/03/strie-chair-2.jpg" 
+             alt = "Minimalissimo" > 
         <div class = "blend">
           <div class = "centered">
             Minimalist
