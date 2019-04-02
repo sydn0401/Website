@@ -157,7 +157,11 @@ animation-play-state: paused;
     
     <h1> Minimalism </h1>
     
-    <div id = "yellow_toggle" class = "text centered">Loading...</div>
+    <div id = "yellow_toggle" class = "text"> /*cascaded class seems to be unacceptable on chrome*/
+      <div class = "centered">
+        Loading...
+      </div>
+    </div>
     
     <p> Less is more </p>
     <p> Make a list for the things you love </p>
@@ -168,9 +172,13 @@ animation-play-state: paused;
         
         <img src = "https://minimalissimo.com/cms/wp-content/uploads/2019/03/strie-chair-2.jpg" 
              alt = "Minimalissimo" > 
-        
-        <div class = "blend centered overlay">Minimalist</div>
-        
+        <div class = "overlay">
+          <div class = "blend">
+            <div class = "centered">
+              Minimalist
+            </div>
+          </div>
+        </div>
       </a>
     </div>
     
