@@ -49,13 +49,16 @@
 
       img {
              display: block;
-               width: 80%;
+               width: 100%;
               margin: auto;
           box-shadow: 3px 3px 3px #888;
-          transition: box-shadow 0.3s;
+          transition: 
+            opacity    ease 0.3s,
+            box-shadow ease 0.3s;
       }
       
       img:hover {
+             opacity: 0.9;
           box-shadow: 15px 15px 20px #888;
       }
       
@@ -98,11 +101,25 @@ animation-play-state: paused;
       }
       
       .container {
-        display: block;
-        margin: auto;
-        position: relative;
-        text-align: center;
-        color: white;
+             display: block;
+               width: 80%;
+              margin: auto;
+            position: relative;
+          text-align: center;
+               color: white;
+      }
+      
+      .container .semicontainer {
+             display: inline-block;
+               width: 38%;
+      }
+      .container > .overlay {
+             opacity: 0;
+          transition: opacity 0.3s;
+      }  
+
+      .container:hover > .overlay {
+             opacity: 1;
       }
       
       .blend {
@@ -131,7 +148,8 @@ animation-play-state: paused;
         0%{ left: 0%; }
         100%   { left: 100%; 
         transform: translate(-100%); }
-      }      
+      }
+      
       @keyframes stretching {
         0% {  width: original;
               height: original;}
@@ -149,13 +167,7 @@ animation-play-state: paused;
     
     <h1> Minimalism </h1>
     
-    <div id = "yellow_toggle" >
-      <div class = "text">
-        <div class = "centered">
-           Loading...
-        </div> 
-      </div>
-    </div>
+    <div id = "yellow_toggle" class = "text centered">Loading...</div>
     
     <p> Less is more </p>
     <p> Make a list for the things you love </p>
@@ -163,13 +175,12 @@ animation-play-state: paused;
     
     <div class = "container">
       <a href = "https://minimalissimo.com/" >
+        
         <img src = "https://minimalissimo.com/cms/wp-content/uploads/2019/03/strie-chair-2.jpg" 
              alt = "Minimalissimo" > 
-        <div class = "blend">
-          <div class = "centered">
-            Minimalist
-          </div>
-        </div>
+        
+        <div class = "centered blend overlay"> Minimalist </div>
+        
       </a>
     </div>
     
