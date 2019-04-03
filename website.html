@@ -112,8 +112,8 @@ animation-play-state: paused;
            font-size: 3vw;
              opacity: 0;
           transition: 
-          opacity   ease 0.3s,
-          font-size ease 0.3s;
+          opacity    ease 0.3s,
+          font-size  ease 0.3s;
       }  
 
       .container:hover .overlay {
@@ -133,28 +133,26 @@ animation-play-state: paused;
       
       /* div motion */
      @keyframes fade_in { 
-        0% { 
+        0%   { 
              opacity: 0;
                  top: 80px; 
        }
-        100% {   
-                 top: original; 
-       }
+        100% {   top: original; }
       }       
       
       @keyframes weavering_block {       
-        0%{ left: 0%; }
-        100%   { left: 100%; 
-        transform: translate(-100%); }
+        0%    { left: 0%; }
+        100%  { left: 100%; 
+           transform: translate(-100%); }
       }
       
       @keyframes stretching {
-        0% {  width: original;
-              height: original;}
+        0%   { width: original;
+              height: original; }
         50%  { width: 220px; 
-               height: 20px; }
-        100%{ width: original;
-              height: original;}
+              height: 20px; }
+        100% { width: original;
+              height: original; }
       }
       
     </style>
@@ -165,8 +163,8 @@ animation-play-state: paused;
    
     <h1> Minimalism </h1>
     
-    <div id = "yellow_toggle" class = "text">
-      <div class = "centered">
+    <div id = "yellow_toggle">
+      <div class = "text centered">
         Loading...
       </div>
     </div>
@@ -181,12 +179,8 @@ animation-play-state: paused;
         <img src = "https://minimalissimo.com/cms/wp-content/uploads/2019/03/strie-chair-2.jpg" 
              alt = "Minimalissimo" >
                 
-        <div class = "blend">
-          <div class = "overlay">
-            <div class = "centered">
-              Minimalist
-            </div>
-          </div>
+        <div class = "blend overlay centered">
+          Minimalist
         </div>
         
       </a>
