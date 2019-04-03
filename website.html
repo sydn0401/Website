@@ -107,12 +107,17 @@ animation-play-state: paused;
              opacity: 0.9;
           box-shadow: 15px 15px 20px #888;
       }
+      
       .container .overlay {
+           font-size: 3vw;
              opacity: 0;
-          transition: opacity ease 0.5s;
+          transition: 
+          opacity   ease 0.5s,
+          font-size ease 0.5s;
       }  
 
       .container:hover .overlay {
+           font-size: 6vw;
              opacity: 1;
       }
       
