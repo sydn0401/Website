@@ -16,37 +16,29 @@
     <style>
       
       * { box-sizing: border-box; }
-      
-      html {
+           
+      body {
           background: #f7f5e7;
                color: black;
+          text-align: center;
+         font-family: Helvetica Neue, Arial, sans-serif;
       } 
       
       h1 {
                  top: -50px;
-               color: black;
-          text-align: center;
          font-weight: 100;
            font-size: 160px;
-         font-family: Helvetica Neue, Arial, sans-serif;
             position: relative;
      animation-delay: 2s;
            animation: fade_in 2s ease-out;
       }
       
       p {
-          text-align: center;
-               color: black;
-         font-family: Helvetica Neue, Arial, sans-serif;
            font-size: 30px;
          font-weight: 100;
       }
 
-      img {
-             display: block;
-               width: 100%;
-              margin: auto;
-      }
+      img    { width: 100%; }
       
       #yellow_toggle {
                  top: 280px;
@@ -57,7 +49,7 @@
             position: absolute;
            animation: 
              weavering_block 3s infinite alternate ease-in-out, 
-             stretching 3s infinite alternate ease-in-out;
+             stretching      3s infinite alternate ease-in-out;
           box-shadow: 3px 3px 3px #888;
        border-radius: 40px;
              padding: 4px;
@@ -100,27 +92,26 @@ animation-play-state: paused;
           width      ease 0.3s,
           opacity    ease 0.3s,
           box-shadow ease 0.3s;
+        
+        & .overlay {
+           font-size: 3vw;
+             opacity: 0;
+          transition: 
+          opacity    ease 0.3s,
+          font-size  ease 0.3s;
+        }  
       }
             
       .container:hover {
                width: 83%;
              opacity: 0.9;
           box-shadow: 15px 15px 20px #888;
-      }
-      
-      .container .overlay {
-           font-size: 3vw;
-             opacity: 0;
-          transition: 
-          opacity    ease 0.3s,
-          font-size  ease 0.3s;
-      }  
-
-      .container:hover .overlay {
+        &:hover .overlay {
            font-size: 6vw;
              opacity: 1;
+        }
       }
-      
+            
       .blend {
                color: white;  /*default color*/
              display: flex;
@@ -179,9 +170,7 @@ animation-play-state: paused;
         <img src = "https://minimalissimo.com/cms/wp-content/uploads/2019/03/strie-chair-2.jpg" 
              alt = "Minimalissimo" >
                 
-        <div class = "blend overlay centered">
-          Minimalist
-        </div>
+        <div class = "blend overlay centered">Minimalist</div>
         
       </a>
     </div>
