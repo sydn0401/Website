@@ -93,27 +93,27 @@ animation-play-state: paused;
           opacity    ease 0.3s,
           box-shadow ease 0.3s;
         
-        &:hover {
-               width: 83%;
-             opacity: 0.9;
-          box-shadow: 15px 15px 20px #888;
-        }
-        
-        &:hover .overlay {
-           font-size: 6vw;
-             opacity: 1;
-        }
-        
-        & .overlay {
+      }
+      
+      .container .overlay {
            font-size: 3vw;
              opacity: 0;
           transition: 
           opacity    ease 0.3s,
           font-size  ease 0.3s;
-        } 
+      } 
       
+      .container:hover {
+               width: 83%;
+             opacity: 0.9;
+          box-shadow: 15px 15px 20px #888;
+        }
+        
+      .container:hover .overlay {
+           font-size: 6vw;
+             opacity: 1;
       }   
-
+      
       .blend {
                color: white;  /*default color*/
              display: flex;
