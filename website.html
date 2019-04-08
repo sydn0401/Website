@@ -14,7 +14,7 @@
     <title> Minimalism </title>
     
     <style>
-      
+            @import url(https://fonts.googleapis.com/css?family=Montserrat:700,400);
       * { box-sizing: border-box; }
            
       html {
@@ -123,6 +123,63 @@ animation-play-state: paused;
           text-align: center;
       }
       
+text {
+             display: inline-block;
+         font-weight: bold;
+           font-size: 18px;
+          text-align: center;
+         white-space: nowrap;
+         font-family: 'Montserrat', sans-serif;
+  div & {
+         font-weight: lighter;
+           font-size: 15px;}
+}
+
+[centered] {
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+ }
+
+ button {
+  display: block;
+  border: 0px solid transparent;
+  background: #FFE8A3;
+  color: #55706D;
+  border-radius: 40px;
+  padding: 15px 30px;
+  overflow: hidden;
+  width: 170px;
+  transition: 
+    all        1.2s,
+    border     0.5s 1.2s,
+    box-shadow 0.3s 1.5s;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 20px;
+  
+  [inline_text] {
+    transform: translateX(300px);
+    font-weight: normal;
+    opacity: 0;
+    transition: 
+      opacity 0.1s 0.5s,
+      transform 0.4s 0.5s;
+  }
+  
+  &:hover {
+    background: #9b5f00;
+    color: #f7f5e7;
+    width: 280px;
+    border: 10px solid #ffb53f;
+    box-shadow: 3px 3px 2px rgba(black, 0.15);
+    [inline_text] {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+}
+      
       /* div motion */
      @keyframes fade_in { 
         0%   { 
@@ -164,6 +221,13 @@ animation-play-state: paused;
     <p> Less is more </p>
     <p> Make a list for the things you love </p>
     <p> Minimalissimo </p>
+    
+    <span>
+      <button>
+        <text>This Button</text>
+        <text inline_text> is Awesome.</text>
+      </button>
+    </span>
     
     <div class = "container">
       <a href = "https://minimalissimo.com/" >
