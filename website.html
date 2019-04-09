@@ -125,17 +125,13 @@ animation-play-state: paused;
           text-align: center;
       }
       
-  text {
+    text {
              display: inline-block;
          font-weight: bold;
            font-size: 18px;
           text-align: center;
          white-space: nowrap;
          font-family: 'Montserrat', sans-serif;
-    div text {
-         font-weight: lighter;
-           font-size: 15px;
-    }
   }
 
   [centered] {
@@ -160,8 +156,9 @@ animation-play-state: paused;
          white-space: nowrap;
          font-weight: bold;
            font-size: 20px;
-  
-   [inline_text] {
+  }
+     
+   .inline_text {
            transform: translateX(300px);
          font-weight: normal;
              opacity: 0;
@@ -170,20 +167,18 @@ animation-play-state: paused;
           transform 0.4s 0.5s;
     }
     
-       button:hover {
-    background: #9b5f00;
-    color: #f7f5e7;
-    width: 280px;
-    border: 10px solid #ffb53f;
-    box-shadow: 3px 3px 2px #222;
-    [inline_text] {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  }
+    button:hover {
+      background: #9b5f00;
+      color: #f7f5e7;
+      width: 280px;
+      border: 10px solid #ffb53f;
+      box-shadow: 3px 3px 2px #222;
       
-
+      .inline_text {
+        transform: translateX(0);
+        opacity: 1;
+      }   
+    }
       
       /* div motion */
      @keyframes fade_in { 
@@ -230,7 +225,7 @@ animation-play-state: paused;
     <span>
       <button centered>
         <text>This Button</text>
-        <text inline_text> is Awesome.</text>
+        <text class="inline_text"> is Awesome.</text>
       </button>
     </span>
     
