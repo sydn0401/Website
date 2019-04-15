@@ -10,13 +10,14 @@
     <meta name = "viewport"      content = "width = device-width, initial-scale = 1.0">
 
     <link rel = "icon" href = "Yellow Hat.ico">
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
     
     <title> Minimalism </title>
     
     <style>
       
       @import url(https://fonts.googleapis.com/css?family=Montserrat:700,400);
-      
+
       * { box-sizing: border-box; }
       
       html {
@@ -40,6 +41,12 @@
       }
 
       img    { width: 100%; }
+      
+      #demoButton {
+            position: sticky;
+                 top: 10%;
+             z-index: 1;
+      }
       
       #yellow_toggle {
                  top: 280px;
@@ -72,13 +79,6 @@ animation-play-state: paused;
            font-size: 15px;
          font-family: Helvetica Neue;
           text-align: center;
-      }
-      
-      .centered {
-            position: absolute;
-                 top: 50%;
-                left: 50%;
-           transform: translate(-50%, -50%);
       }
       
       .container {
@@ -125,7 +125,13 @@ animation-play-state: paused;
          align-items: center;
           text-align: center;
       }
-      
+            
+      .centered {
+            position: absolute;
+                 top: 50%;
+                left: 50%;
+           transform: translate(-50%, -50%);
+      }
       
      [centered] {
      justify-content: center;
@@ -142,35 +148,34 @@ animation-play-state: paused;
          font-family: 'Montserrat', sans-serif;
       }
 
-      button {
-             display: block;
-              border: 10px solid;
-        border-color: inherit;
+      .button {
+             display: inline-block;
+              border: 0px solid #f7f5e7;
           background: #FFE8A3;
                color: #55706D;
        border-radius: 40px;
              padding: 15px 30px;
             overflow: hidden;
                width: 170px;
-          transition: 
-          all         1s,
-          border      0.3s 1s,
-          box-shadow  0.3s 1s;
          white-space: nowrap;
          font-weight: bold;
-           font-size: 20px;
+           font-size: 20px;  
+          transition: 
+          all         ease-out .8s,
+          border      ease-out .3s,
+          box-shadow  ease-out .3s;
       }
      
    .inline_text {
-           transform: translateX(300px);
+           transform: translateX(500px);
          font-weight: normal;
              opacity: 0;
           transition: 
-          opacity     0.1s 0.5s,
-          transform   0.4s 0.5s;
+          opacity     .1s .5s,
+          transform   .4s .5s;
     }
     
-    button:hover {
+    .button:hover {
           background: #9b5f00;
                color: #f7f5e7;
                width: 280px;
@@ -178,11 +183,16 @@ animation-play-state: paused;
           box-shadow: 3px 3px 2px #777;
     }
      
-    button:hover .inline_text {
+    .button:hover .inline_text {
            transform: translateX(0);
              opacity: 1;
     }   
-         
+    
+    .button:active {
+             opacity: 0.6;
+          box-shadow: none;
+    }
+      
       /* div motion */
      @keyframes fade_in { 
         0%   { 
@@ -225,11 +235,14 @@ animation-play-state: paused;
     <p> Make a list for the things you love </p>
     <p> Minimalissimo </p>
     
-    
-    <button centered>
-      <text>This Button</text>
-      <text class="inline_text"> is Awesome.</text>
-    </button>
+    <a href = "https://minimalissimo.com/" >
+      <div id="demoButton" data-aos="fade-right">
+        <div class="button">
+          <text>Minimalist</text>
+          <text class="inline_text">lifestyle</text>
+        </div>
+      </div>
+    </a>
     
     <div class = "container">
       <a href = "https://minimalissimo.com/" >
@@ -243,6 +256,17 @@ animation-play-state: paused;
     </div>
     
   </body>
+  
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  
+  <script>
+    
+    AOS.init({
+				easing: 'ease-out-back',
+				duration: 1000
+  });
+    
+  </script>
   
   <script>
     //Make the DIV element draggagle:
@@ -283,6 +307,7 @@ animation-play-state: paused;
   
   	  elmnt.onmousedown = dragMouseDown;
     }
+    
   </script>
   
 </html>
