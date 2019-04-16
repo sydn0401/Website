@@ -42,6 +42,21 @@
 
       img    { width: 100%; }
       
+			[funfuntown] {
+  	background-image: url("Minimalism.jpg");
+  						height: 100%;
+			}
+
+			[The_Musée_dOrsay] {
+   	background-image: url("The Musée d'Orsay.jpg");
+  						height: 100%;
+			}
+
+			[Danbo_In_Paris] {
+  	background-image: url("Danbo In Paris 2.jpg");
+  						height: 100%;
+			}
+			
       #demoButton {
             position: sticky;
                  top: 10%;
@@ -56,8 +71,8 @@
           background: yellow;
             position: absolute;
            animation: 
-             weavering_block 3s infinite alternate ease-in-out, 
-             stretching      3s infinite alternate ease-in-out;
+      weavering_block 3s infinite alternate ease-in-out, 
+           stretching 3s infinite alternate ease-in-out;
           box-shadow: 3px 3px 3px #888;
        border-radius: 40px;
              padding: 4px;
@@ -139,6 +154,8 @@ animation-play-state: paused;
               margin: auto;
       }
       
+			[]
+			
       text {
              display: inline-block;
          font-weight: bold;
@@ -192,7 +209,46 @@ animation-play-state: paused;
              opacity: 0.6;
           box-shadow: none;
     }
-      
+    
+    .parallax {
+  position: relative;
+	background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition:
+  	opacity ease .5s;
+}
+
+.parallax:hover {
+	opacity: 0.65;
+}
+
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
+}
+
+span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
+}
+
+.text-between-pictures {
+		color: #777;
+    background-color:	#white;
+    text-align:	center;
+    padding:	50px 80px;
+    text-align: 	justify;
+}	    
+	    
       /* div motion */
      @keyframes fade_in { 
         0%   { 
@@ -236,10 +292,10 @@ animation-play-state: paused;
     <p> Minimalissimo </p>
     
     <a href = "https://minimalissimo.com/" >
-      <div id="demoButton" data-aos="fade-right">
-        <div class="button">
+      <div id = "demoButton" data-aos = "fade-right">
+        <div class = "button">
           <text>Minimalist</text>
-          <text class="inline_text">lifestyle</text>
+          <text class = "inline_text">lifestyle</text>
         </div>
       </div>
     </a>
@@ -254,7 +310,19 @@ animation-play-state: paused;
         
       </a>
     </div>
-    
+   
+   	<div funfuntown class = "parallax">
+			<div class = "caption">
+				<span class = "border">Less is more</span>
+			</div>
+		</div>
+
+		<div class = "text-between-pictures" style="color: #ddd;background-color:#282E34;">
+  		<p> Make a list for the things you love </p>
+  	</div>
+
+		<div The_Musée_dOrsay class = "parallax"></div>
+		
   </body>
   
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
