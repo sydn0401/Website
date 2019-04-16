@@ -48,17 +48,17 @@
       img    { width: 100%; }
       
       [funfuntown] {
-					background: url("Minimalism.JPG");
-				      height: 100%;
+          background: url("Minimalism.JPG");
+              height: 100%;
 			}
 
       [The_Musée_dOrsay] {
-   				background: url("The Musée d'Orsay.jpg");
-  						height: 100%;
+          background: url("The Musée d'Orsay.jpg");
+              height: 100%;
 			}
 
       [Danbo_In_Paris] {
-    			background: url("Danbo In Paris 2.jpg");
+	  background: url("Danbo In Paris 2.jpg");
               height: 100%;
       }
 			
@@ -219,14 +219,8 @@ animation-play-state: paused;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  transition:
-  	opacity ease .5s;
 }
-
-.parallax:hover {
-	opacity: 0.65;
-}
-
+	    
 .caption {
   position: absolute;
   left: 0;
@@ -312,17 +306,29 @@ span.border {
       </a>
     </div>
    
-   	<div funfuntown class = "parallax">
-			<div class = "caption">
-				<span class = "border">Less is more</span>
-			</div>
-		</div>
+    <div funfuntown class="parallax">
+      <div class="caption" data-aos="fade-up">
+        <span class=" border">Less is more</span>
+      </div>
+    </div>
+    
+    <div class="text-between-pictures" style="color: #ddd;background-color:#282E34;">
+      <p>Make a list for the things you love</p>
+    </div>
 
-		<div class = "text-between-pictures" style="color: #ddd;background-color:#282E34;">
-  		<p> Make a list for the things you love </p>
-  	</div>
+    <div The_Musée_dOrsay class="parallax">
+      <div class="caption" data-aos="fade-up">
+        <span class=" border">Better decision</span>
+      </div>
+    </div>
+    
+    <div class="text-between-pictures">
+      <p>Love the things you own</p>
+    </div>
 
-		<div The_Musée_dOrsay class = "parallax"></div>
+    <div Danbo_In_Paris class="parallax"><div class="caption">
+      <span class=" border" data-aos="fade-up">Live with your love</span>
+    </div></div>
 		
   </body>
   
