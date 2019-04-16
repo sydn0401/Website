@@ -10,7 +10,7 @@
     <meta name = "viewport"      content = "width = device-width, initial-scale = 1.0">
 
     <link rel = "icon" 	href = "Yellow Hat.ico">
-    <link rel = "stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel = "stylesheet" href = "https://unpkg.com/aos@2.3.1/dist/aos.css">
     
     <title> Minimalism </title>
     
@@ -19,7 +19,12 @@
       @import url(https://fonts.googleapis.com/css?family=Montserrat:700,400);
 
       * { box-sizing: border-box; }
-      
+			
+      body, html {
+							height: 100%;
+							margin: 0;
+			}
+			
       html {
           background: #f7f5e7;
                color: black;
@@ -42,20 +47,20 @@
 
       img    { width: 100%; }
       
-			[funfuntown] {
-  	background-image: url("Minimalism.JPG");
+      [funfuntown] {
+					background: url("Minimalism.JPG");
+				      height: 100%;
+			}
+
+      [The_Musée_dOrsay] {
+   				background: url("The Musée d'Orsay.jpg");
   						height: 100%;
 			}
 
-			[The_Musée_dOrsay] {
-   	background-image: url("The Musée d'Orsay.jpg");
-  						height: 100%;
-			}
-
-			[Danbo_In_Paris] {
-  	background-image: url("Danbo In Paris 2.jpg");
-  						height: 100%;
-			}
+      [Danbo_In_Paris] {
+    			background: url("Danbo In Paris 2.jpg");
+              height: 100%;
+      }
 			
       #demoButton {
             position: sticky;
@@ -153,8 +158,6 @@ animation-play-state: paused;
          align-items: center;
               margin: auto;
       }
-      
-			[]
 			
       text {
              display: inline-block;
@@ -287,8 +290,6 @@ span.border {
       </div>
     </div>
     
-    <p> Less is more </p>
-    <p> Make a list for the things you love </p>
     <p> Minimalissimo </p>
     
     <a href = "https://minimalissimo.com/" >
