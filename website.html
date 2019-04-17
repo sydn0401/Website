@@ -18,6 +18,14 @@
       
       @import url(https://fonts.googleapis.com/css?family=Montserrat:700,400);
 
+     /* Shorthand Order
+      * font: Need to supply at least [font-size] and [font-family].
+      * font: [font-style] [font-variant] [font-weight] [font-size]/[line-height] [font-family];
+      * background: [background-image] [background-position] / [background-size] 
+                    [background-repeat] [background-attachment] [background-origin] 
+	            [background-clip] [background-color];
+      */
+	    
       * { box-sizing: border-box; }
 			
       body, html {
@@ -32,14 +40,12 @@
          font-family: Helvetica Neue, Arial, sans-serif;
       } 
       
-      h1 {
-                 top: -50px;
+      .parallax h1 {
          font-weight: 100;
            font-size: 160px;
-            position: relative;
            animation: fade_in 2s ease-out;
       }
-      
+	    
       p {
            font-size: 30px;
          font-weight: 100;
@@ -50,12 +56,12 @@
       [funfuntown] {
           background: url(Minimalism.JPG);
               height: 100%;
-			}
+      }
 
       [The_Musée_dOrsay] {
           background: url("The Musée d'Orsay.jpg");
               height: 100%;
-			}
+      }
 
       [Danbo_In_Paris] {
 	  background: url("Danbo In Paris 2.jpg");
@@ -195,14 +201,16 @@ animation-play-state: paused;
           transform   .4s .5s;
     }
     
+    .button:focus,
     .button:hover {
-          background: #9b5f00;
+    background-color: #9b5f00;
                color: #f7f5e7;
                width: 280px;
               border: 10px solid #ffb53f;
           box-shadow: 3px 3px 2px #777;
     }
      
+    .button:focus .inline_text,	    
     .button:hover .inline_text {
            transform: translateX(0);
              opacity: 1;
@@ -215,10 +223,8 @@ animation-play-state: paused;
     
     .parallax {
             position: relative;
-background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+	        background: center / cover no-repeat fixed;
+      .caption { z-index: 1; }
 }
 	    
 .caption {
@@ -239,12 +245,46 @@ span.border {
 }
 
 .text-between-pictures {
-               color: #777;
-    background-color: white;
+               color: white;
+    background-color: black;
     text-align:	center;
     padding:	50px 80px;
 }	    
-	    
+	
+			.overlay {
+    display: block;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    z-index: 4500;
+  &::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    z-index: 5000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to bottom,transparent 20%, rgba(0,0,0,0.4) 100%);
+    transition-property: opacity , transform;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
+    opacity: 1;
+  }
+}
+
+.container .overlay {
+  &::after {
+    background: linear-gradient(to bottom left, transparent 30%, rgba(0,0,0,0.6) 100%);
+    opacity: 0.2;
+  }
+  
+  &:hover {
+    &::after {opacity: 0.6;}
+    }
+}
+			
       /* div motion */
      @keyframes fade_in { 
         0%   { 
@@ -311,9 +351,7 @@ span.border {
       </div>
     </div>
     
-    <div class="text-between-pictures"  
-	 data-aos="flip-up" 
-	 style="color: #ddd;background-color:black;">
+    <div class="text-between-pictures" data-aos="flip-up">
       <p>Make a list for the things you love</p>
     </div>
 
