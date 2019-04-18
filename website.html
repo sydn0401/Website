@@ -29,284 +29,298 @@
       * { box-sizing: border-box; }
 			
       body, html {
-              height: 100%;
+        height: 100%;
 	      margin: 0;
-      }
-			
-      html {
-          background: #f7f5e7;
-               color: black;
-          text-align: center;
-         font-family: Helvetica Neue, Arial, sans-serif;
-      } 
-      
-      .parallax h1 {
-         font-weight: 100;
-           font-size: 160px;
-           animation: fade_in 2s ease-out;
+	      background: #f7f5e7;
+        color: black;
+        text-align: center;
+        font-family: Helvetica Neue, Arial, sans-serif;
       }
 	    
       p {
-           font-size: 30px;
-         font-weight: 100;
+        font-size: 30px;
+        font-weight: 100;
       }
 
-      img    { width: 100%; }
-      
+      img { width: 100%; }
+
+			/****************/
+      /*   Pictures   */
+      /****************/
+			
       [funfuntown] {
-          background: url(Minimalism.JPG);
-              height: 100%;
+        background: url(Minimalism.JPG);
+        height: 100%;
       }
 
       [The_Musée_dOrsay] {
-          background: url("The Musée d'Orsay.jpg");
-              height: 100%;
+        background: url("The Musée d'Orsay.jpg");
+        height: 100%;
       }
 
       [Danbo_In_Paris] {
-	  background: url("Danbo In Paris 2.jpg");
-              height: 100%;
+	      background: url("Danbo In Paris 2.jpg");
+        height: 100%;
       }
+
+      /**********/
+      /*   ID   */
+      /**********/
 			
       #demoButton {
-            position: sticky;
-                 top: 10%;
-             z-index: 1;
+        z-index: 1;
       }
-      
+			
       #yellow_toggle {
-                 top: 280px;
-               width: 80px;
-              height: 40px;
-             display: block;
-          background: yellow;
-            position: absolute;
-           animation: 
-      weavering_block 3s infinite alternate ease-in-out, 
-           stretching 3s infinite alternate ease-in-out;
-          box-shadow: 3px 3px 3px #888;
-       border-radius: 40px;
-             padding: 4px;
-              cursor: pointer;
-          transition: 
-          opacity    ease 0.3s, 
-          box-shadow ease 0.3s;
+        top: 280px;
+        width: 80px;
+        height: 40px;
+        position: absolute;
+        display: block;
+        background: yellow;
+        box-shadow: 3px 3px 3px #888;
+        border-radius: 40px;
+        padding: 4px;
+        cursor: pointer;
+  
+        animation: 
+          stretching      3s infinite alternate ease-in-out,
+          weavering_block 3s infinite alternate ease-in-out;
+  
+        transition: 
+          opacity    ease .3s, 
+          box-shadow ease .3s;
       }
       
       #yellow_toggle:active {
-             opacity: 0.6;
-          box-shadow: 20px 20px 25px #000;
-animation-play-state: paused;
+        opacity: 0.6;
+        box-shadow: 20px 20px 25px #000;
+        animation-play-state: paused;
       }
       
-      .text {
-             display: block;
-         font-weight: lighter;
-           font-size: 15px;
-         font-family: Helvetica Neue;
-          text-align: center;
-      }
-      
-      .container {
-             display: block;
-               width: 80%;
-              margin: auto;
-          margin-bottom: 1rem;
-            position: relative;
-          text-align: center;
-               color: white;
-          box-shadow: 3px 3px 3px #888;
-          transition: 
-          width       ease 0.3s,
-          opacity     ease 0.3s,
-          box-shadow  ease 0.3s;
-        
-      }
-      
-      .container .overlay {
-           font-size: 3vw;
-             opacity: 0;
-          transition: 
-          opacity     ease 0.3s,
-          font-size   ease 0.3s;
-      } 
-      
-      .container:hover {
-               width: 83%;
-             opacity: 0.8;
-          box-shadow: 15px 15px 20px #888;
-        }
-        
-      .container:hover .overlay {
-           font-size: 6vw;
-             opacity: 1;
-      }   
-      
-      .blend {
-               color: white;  /*default color*/
-             display: flex;
-      mix-blend-mode: difference;    
-      flex-direction: column;
-     justify-content: center;
-         align-items: center;
-          text-align: center;
-      }
-            
-      .centered {
-            position: absolute;
-                 top: 50%;
-                left: 50%;
-           transform: translate(-50%, -50%);
-      }
-      
-     [centered] {
-     justify-content: center;
-         align-items: center;
-              margin: auto;
+      /*************/
+      /*   Class   */
+      /*************/
+     
+			/* 	 Text		 */
+			text {
+        display: inline-block;
+        text-align: center;
+        white-space: nowrap;
+        font: bold 20px 'Montserrat', sans-serif;
       }
 			
-      text {
-             display: inline-block;
-         font-weight: bold;
-           font-size: 18px;
-          text-align: center;
-         white-space: nowrap;
-         font-family: 'Montserrat', sans-serif;
+      .text {
+        font: lighter 15px Helvetica Neue;
+        text-align: center;
+      }
+      
+	    .inline_text {
+        transform: translateX(500px);
+        font-weight: normal;
+        opacity: 0;
+        transition: 
+          opacity     ease .1s .5s ,
+          transform   ease .4s .5s ;
       }
 
-      .button {
-             display: inline-block;
-              border: 0px solid #f7f5e7;
-          background: #FFE8A3;
-               color: #55706D;
-       border-radius: 40px;
-             padding: 15px 30px;
-            overflow: hidden;
-               width: 170px;
-         white-space: nowrap;
-         font-weight: bold;
-           font-size: 20px;  
+      .text-between-pictures {
+          color: white;
+          background-color:	black;
+          text-align:	center;
+          padding: 50px 80px;
+      }
+
+			.caption {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        color: #000;
+      }
+
+      /*   Container   */
+      .container {
+        display: flex; 
+        flex: column;
+        width: 80%;
+        margin: auto;
+        margin-top: 1rem;
+        position: relative;
+        color: white;
+        box-shadow: 3px 3px 3px #888;
+        transition: 
+          all        ease .3s,
+          width      ease .3s,
+          box-shadow ease .3s;
+
+        .text{
+          font-size: 3vw;
+          opacity: 0;
           transition: 
+            opacity     ease .3s,
+            font-size   ease .3s;
+        }
+	      
+	      .overlay {
+          font-size: 3vw;
+          transition: 
+            opacity     ease .3s,
+            font-size   ease .3s;
+					
+					&::after {
+            background: linear-gradient(to bottom left, transparent 30%, rgba(0,0,0,0.6) 100%);
+            opacity: 0;
+          }
+        }
+      }
+
+      .container:focus,
+      .container:hover {
+        width: 83%;
+        box-shadow: 15px 15px 20px #888;
+
+        .text  {
+          font-size: 6vw;
+          opacity: 1;
+        }
+	
+        .overlay {
+          font-size: 6vw;
+          opacity: 1;
+					
+					&::after { opacity: 0.6; }
+        }
+      }
+      
+			span.border {
+        background-color: #111;
+        color: #fff;
+        padding: 20px;
+        font-size: 25px;
+        letter-spacing: 10px;
+        text-align: center;
+      }
+
+      .button {         
+        display: inline-block;
+        border: 0px solid #f7f5e7;
+        border-radius: 40px;
+        width: 180px;
+        padding: 15px 30px;
+        background: #FFE8A3;
+        color: #55706D;
+        overflow: hidden;
+        white-space: nowrap;
+        font-weight: bold;
+        font-size: 20px;  
+        transition: 
           all         ease-out .8s,
           border      ease-out .3s,
           box-shadow  ease-out .3s;
       }
-     
-   .inline_text {
-           transform: translateX(500px);
-         font-weight: normal;
-             opacity: 0;
-          transition: 
-          opacity     .1s .5s,
-          transform   .4s .5s;
-    }
-    
-    .button:focus,
-    .button:hover {
-    background-color: #9b5f00;
-               color: #f7f5e7;
-               width: 280px;
-              border: 10px solid #ffb53f;
-          box-shadow: 3px 3px 2px #777;
-    }
-     
-    .button:focus .inline_text,	    
-    .button:hover .inline_text {
-           transform: translateX(0);
-             opacity: 1;
-    }   
-    
-    .button:active {
-             opacity: 0.6;
-          box-shadow: none;
-    }
-    
-    .parallax {
-            position: relative;
-	        background: center / cover no-repeat fixed;
-      .caption { z-index: 1; }
-}
-	    
-.caption {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  width: 100%;
-  text-align: center;
-  color: #000;
-}
 
-span.border {
-  background-color: #111;
-  color: #fff;
-  padding: 18px;
-  font-size: 25px;
-  letter-spacing: 10px;
-}
+      .button:focus,
+      .button:hover {
+        background: #9b5f00;
+        color: #f7f5e7;
+        width: 280px;
+        border: 10px solid #ffb53f;
+        box-shadow: 3px 3px 2px #777;
 
-.text-between-pictures {
-               color: white;
-    background-color: black;
-    text-align:	center;
-    padding:	50px 80px;
-}	    
-	
-			.overlay {
-    display: block;
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-    z-index: 4500;
-  &::after {
-    pointer-events: none;
-    content: "";
-    position: absolute;
-    z-index: 5000;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: linear-gradient(to bottom,transparent 20%, rgba(0,0,0,0.4) 100%);
-    transition-property: opacity , transform;
-    transition-duration: 300ms;
-    transition-timing-function: ease-in-out;
-    opacity: 1;
-  }
-}
-
-.container .overlay {
-  &::after {
-    background: linear-gradient(to bottom left, transparent 30%, rgba(0,0,0,0.6) 100%);
-    opacity: 0.2;
-  }
-  
-  &:hover {
-    &::after {opacity: 0.6;}
-    }
-}
-			
-      /* div motion */
-     @keyframes fade_in { 
-        0%   { 
-             opacity: 0;
-                 top: 80px; 
-       }
-        100% {   top: original; }
-      }       
-      
-      @keyframes weavering_block {       
-        0%    { left: 0%; }
-        100%  { left: 100%; 
-           transform: translate(-100%); }
+        .inline_text {
+          transform: translateX(0);
+          opacity: 1;
+        }
       }
-      
+
+      .button:active {
+        opacity: 0.6;
+        box-shadow: none;
+      }
+
+      /*   Effect   */
+      .parallax {
+        position: relative;
+        background: center / cover no-repeat fixed;
+      }
+			      
+      .blend {
+        color: white;   /*default color*/
+        mix-blend-mode: difference;
+      }
+
+      .overlay {
+          display: block;
+          width: 100%;
+          position: relative;
+          overflow: hidden;
+          z-index: 4500;
+				
+        &::after {
+					opacity: 1;
+					content: "";
+          pointer-events: none;
+          position: absolute;
+          z-index: 5000;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: linear-gradient(to bottom,transparent 20%, rgba(0,0,0,0.4) 100%);
+          transition: 
+						opacity   ease-in-out .3s, 
+						transform ease-in-out .3s;
+        }
+      }
+			
+      /*   Position   */
+			.centered {         
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+      }
+			
+			[centered] {
+        margin: auto;
+        align-items: center;
+        justify-content: center;
+      }
+			
+      /*****************/
+      /*   Animation   */
+      /*****************/
+			
+      @keyframes fade_in {
+        0% {
+          opacity: 0;
+          top: 80px; 
+        }
+        100% { top: original; }
+      }       
+
+      @keyframes weavering_block {
+        0%    { left: 0%; }
+        100%  {
+          left: 100%;
+          transform: translate(-100%);
+        }
+      }
+
       @keyframes stretching {
-        0%   { width: original;
-              height: original; }
-        50%  { width: 220px; 
-              height: 13px; }
-        100% { width: original;
-              height: original; }
+        0% {
+          width: original;
+          height: original;
+        }
+        50% {
+          width: 220px;
+          height: 13px;
+        }
+        100% {
+          width: original;
+          height: original;
+        }
       }
       
     </style>
@@ -315,61 +329,69 @@ span.border {
   
   <body>
    
-    <h1> Minimalism </h1>
-    
-    <div id = "yellow_toggle">
-      <div class = "text centered">
-        Loading...
+    <div funfuntown class="parallax overlay">
+      <div class="caption" data-aos="fade-up">
+        <span class="border">Minimalism</span>
+      </div>
+	   </div>
+     
+    <!--div id = "yellow_toggle">
+      <div class ="text centered">
+        Minimalissimo
       </div>
     </div>
-    
-    <p> Minimalissimo </p>
     
     <a href = "https://minimalissimo.com/" >
-      <div id = "demoButton" data-aos = "fade-right">
-        <div class = "button">
-          <text>Minimalist</text>
-          <text class = "inline_text">lifestyle</text>
+      <div id="demoButton" data-aos="fade-right">
+        <div class="button">
+          <text>Minimalism</text>
+          <text class="inline_text">lifestyle</text>
         </div>
       </div>
-    </a>
-    
-    <div class = "container">
-      <a href = "https://minimalissimo.com/" >
-
-        <img src = "https://minimalissimo.com/cms/wp-content/uploads/2019/03/strie-chair-2.jpg" 
-             alt = "Minimalissimo" >
-                
-        <div class = "blend overlay centered">Minimalist</div>
+    </a-->
         
-      </a>
-    </div>
-   
-    <div funfuntown class="parallax">
-      <div class="caption" data-aos="fade-up">
-        <span class="border">Less is more</span>
-      </div>
-    </div>
-    
     <div class="text-between-pictures" data-aos="flip-up">
       <p>Make a list for the things you love</p>
     </div>
 
-    <div The_Musée_dOrsay class="parallax">
+    <div The_Musée_dOrsay class="parallax overlay">
       <div class="caption" data-aos="fade-up">
-        <span class="border">Better decision</span>
-      </div>
+		    <span class="border">Better decision</span>
+	    </div>
     </div>
     
     <div class="text-between-pictures" data-aos="flip-up">
       <p>Love the things you own</p>
     </div>
 
-    <div Danbo_In_Paris class="parallax">
+    <div Danbo_In_Paris class="parallax overlay">
       <div class="caption" data-aos="fade-up">
-        <span class="border">Live with your love</span>
+		    <span class="border" >Live with your love</span>
+	    </div>
+    </div>
+    
+    <div class="text-between-pictures" data-aos="flip-up">
+      <p>Love the things you own</p>
+    </div>
+    
+    <div funfuntown class="parallax overlay">
+      <div class="caption" data-aos="fade-up">
+        <span class="border">Lighter life</span>
+      </div>
+	  </div>
+    
+    <div class="container">
+      <div data-aos="fade-up">
+        <div class="overlay"> 
+          <a href="https://minimalissimo.com/" >
+            <img src="https://minimalissimo.com/cms/wp-content/uploads/2019/03/strie-chair-2.jpg" 
+             alt="Minimalissimo" >
+            <div class="blend text centered">Minimalism</div>
+          </a>
+        </div>
       </div>
     </div>
+
 		
   </body>
   
