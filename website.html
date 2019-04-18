@@ -30,8 +30,8 @@
 			
       body, html {
         height: 100%;
-	      margin: 0;
-	      background: #f7f5e7;
+        margin: 0;
+        background: #f7f5e7;
         color: black;
         text-align: center;
         font-family: Helvetica Neue, Arial, sans-serif;
@@ -44,22 +44,22 @@
 
       img { width: 100%; }
 
-			/****************/
+      /****************/
       /*   Pictures   */
       /****************/
 			
       [funfuntown] {
-        background: url(Minimalism.JPG);
+        background: url("Minimalism.JPG");
         height: 100%;
       }
 
-      [The_Musée_dOrsay] {
+      [the_musée_d_orsay] {
         background: url("The Musée d'Orsay.jpg");
         height: 100%;
       }
 
-      [Danbo_In_Paris] {
-	      background: url("Danbo In Paris 2.jpg");
+      [danbo_in_paris] {
+        background: url("Danbo In Paris 2.jpg");
         height: 100%;
       }
 
@@ -102,8 +102,8 @@
       /*   Class   */
       /*************/
      
-			/* 	 Text		 */
-			text {
+      /*   Text   */
+      text {
         display: inline-block;
         text-align: center;
         white-space: nowrap;
@@ -115,7 +115,7 @@
         text-align: center;
       }
       
-	    .inline_text {
+      .inline_text {
         transform: translateX(500px);
         font-weight: normal;
         opacity: 0;
@@ -126,12 +126,12 @@
 
       .text-between-pictures {
           color: white;
-          background-color:	black;
-          text-align:	center;
+          background-color: black;
+          text-align: center;
           padding: 50px 80px;
       }
 
-			.caption {
+      .caption {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -162,13 +162,13 @@
             font-size   ease .3s;
         }
 	      
-	      .overlay {
+        .overlay {
           font-size: 3vw;
           transition: 
             opacity     ease .3s,
             font-size   ease .3s;
 					
-					&::after {
+          &::after {
             background: linear-gradient(to bottom left, transparent 30%, rgba(0,0,0,0.6) 100%);
             opacity: 0;
           }
@@ -189,11 +189,11 @@
           font-size: 6vw;
           opacity: 1;
 					
-					&::after { opacity: 0.6; }
+          &::after { opacity: 0.6; }
         }
       }
       
-			span.border {
+      span.border {
         background-color: #111;
         color: #fff;
         padding: 20px;
@@ -258,8 +258,8 @@
           z-index: 4500;
 				
         &::after {
-					opacity: 1;
-					content: "";
+          opacity: 1;
+          content: "";
           pointer-events: none;
           position: absolute;
           z-index: 5000;
@@ -269,20 +269,20 @@
           left: 0;
           background: linear-gradient(to bottom,transparent 20%, rgba(0,0,0,0.4) 100%);
           transition: 
-						opacity   ease-in-out .3s, 
-						transform ease-in-out .3s;
+            opacity   ease-in-out .3s, 
+            transform ease-in-out .3s;
         }
       }
 			
       /*   Position   */
-			.centered {         
+      .centered {         
         top: 50%;
         left: 50%;
         position: absolute;
         transform: translate(-50%, -50%);
       }
-			
-			[centered] {
+
+      [centered] {
         margin: auto;
         align-items: center;
         justify-content: center;
@@ -333,7 +333,7 @@
       <div class="caption" data-aos="fade-up">
         <span class="border">Minimalism</span>
       </div>
-	   </div>
+    </div>
      
     <!--div id = "yellow_toggle">
       <div class ="text centered">
@@ -354,20 +354,20 @@
       <p>Make a list for the things you love</p>
     </div>
 
-    <div The_Musée_dOrsay class="parallax overlay">
+    <div the_musée_d_orsay class="parallax overlay">
       <div class="caption" data-aos="fade-up">
-		    <span class="border">Better decision</span>
-	    </div>
+        <span class="border">Better decision</span>
+      </div>
     </div>
     
     <div class="text-between-pictures" data-aos="flip-up">
       <p>Love the things you own</p>
     </div>
 
-    <div Danbo_In_Paris class="parallax overlay">
+    <div danbo_in_paris class="parallax overlay">
       <div class="caption" data-aos="fade-up">
-		    <span class="border" >Live with your love</span>
-	    </div>
+        <span class="border" >Live with your love</span>
+      </div>
     </div>
     
     <div class="text-between-pictures" data-aos="flip-up">
