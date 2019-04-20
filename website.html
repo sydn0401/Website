@@ -52,17 +52,17 @@
       /****************/
 			
       [funfuntown] {
-        background: url("master/Minimalism.JPG");
+        background-image: url("master/Minimalism.JPG");
         height: 100%;
       }
 
       [the_musée_d_orsay] {
-        background: url("master/The Musée d'Orsay.jpg");
+        background-image: url("master/The Musée d'Orsay.jpg");
         height: 100%;
       }
 
       [danbo_in_paris] {
-        background: url("master/Danbo In Paris 2.jpg");
+        background-image: url("master/Danbo In Paris 2.jpg");
         height: 100%;
       }
 
@@ -299,7 +299,7 @@
       /*****************/
       /*   Animation   */
       /*****************/
-			
+
       @keyframes fade_in {
         0% {
           opacity: 0;
@@ -330,19 +330,61 @@
           height: original;
         }
       }
-      
+
     </style>
-    
+
   </head>
-  
+
   <body>
-   
-    <div funfuntown class="parallax overlay">
+
+    <div class="parallax overlay" funfuntown>
       <div class="caption" data-aos="fade-up">
         <span class="border">Minimalism</span>
       </div>
     </div>
-     
+
+    <div class="text-between-pictures" data-aos="flip-up">
+      <p>Make a list for the things you love</p>
+    </div>
+
+    <div class="parallax overlay" the_musée_d_orsay>
+      <div class="caption" data-aos="fade-up">
+        <span class="border">Better decision</span>
+      </div>
+    </div>
+
+    <div class="text-between-pictures" data-aos="flip-up">
+      <p>Love the things you own</p>
+    </div>
+
+    <div class="parallax overlay" danbo_in_paris>
+      <div class="caption" data-aos="fade-up">
+        <span class="border" >Live with your love</span>
+      </div>
+    </div>
+
+    <div class="text-between-pictures" data-aos="flip-up">
+      <p>Love the things you own</p>
+    </div>
+
+    <div class="parallax overlay" funfuntown>
+      <div class="caption" data-aos="fade-up">
+        <span class="border">Lighter life</span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div data-aos="fade-up">
+        <div class="overlay"> 
+          <a href="https://minimalissimo.com/" >
+            <img src="https://minimalissimo.com/cms/wp-content/uploads/2019/03/strie-chair-2.jpg" 
+             alt="Minimalissimo" >
+            <div class="blend text centered">Minimalism</div>
+          </a>
+        </div>
+      </div>
+    </div>
+    
     <!--div id = "yellow_toggle">
       <div class ="text centered">
         Minimalissimo
@@ -357,49 +399,6 @@
         </div>
       </div>
     </a-->
-        
-    <div class="text-between-pictures" data-aos="flip-up">
-      <p>Make a list for the things you love</p>
-    </div>
-
-    <div class="parallax overlay" the_musée_d_orsay>
-      <div class="caption" data-aos="fade-up">
-        <span class="border">Better decision</span>
-      </div>
-    </div>
-    
-    <div class="text-between-pictures" data-aos="flip-up">
-      <p>Love the things you own</p>
-    </div>
-
-    <div danbo_in_paris class="parallax overlay">
-      <div class="caption" data-aos="fade-up">
-        <span class="border" >Live with your love</span>
-      </div>
-    </div>
-    
-    <div class="text-between-pictures" data-aos="flip-up">
-      <p>Love the things you own</p>
-    </div>
-    
-    <div funfuntown class="parallax overlay">
-      <div class="caption" data-aos="fade-up">
-        <span class="border">Lighter life</span>
-      </div>
-    </div>
-    
-    <div class="container">
-      <div data-aos="fade-up">
-        <div class="overlay"> 
-          <a href="https://minimalissimo.com/" >
-            <img src="https://minimalissimo.com/cms/wp-content/uploads/2019/03/strie-chair-2.jpg" 
-             alt="Minimalissimo" >
-            <div class="blend text centered">Minimalism</div>
-          </a>
-        </div>
-      </div>
-    </div>
-
 		
   </body>
   
