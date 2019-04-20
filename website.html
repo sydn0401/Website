@@ -45,7 +45,10 @@
         font-weight: 100;
       }
 
-      img { width: 100%; }
+      img {
+        display: block;
+        width: 100%;
+      }
 
       /****************/
       /*   Pictures   */
@@ -142,7 +145,7 @@
       .container {
         display: flex; 
         flex: column;
-        width: 80%;
+        width: 1000px;
         margin: auto;
         margin-top: 1rem;
         position: relative;
@@ -165,7 +168,6 @@
       }
 	      
       .container .overlay {
-        font-size: 3vw;
         transition: 
           opacity     ease .3s,
           font-size   ease .3s;
@@ -178,22 +180,16 @@
 			
       .container:focus,
       .container:hover {
-        width: 83%;
+        width: 1200px;
         box-shadow: 15px 15px 20px #888; 
       }
       
       .container:focus,
-      .container:hover .text  {
+      .container:hover .text {
         font-size: 6vw;
         opacity: 1;
       }
-	
-      .container:focus,
-      .container:hover .overlay {
-        font-size: 6vw;
-        opacity: 1;
-      }				
-        
+
       .container:focus,
       .container:hover .overlay::after { opacity: 0.6; }
       /*  sass end  */
@@ -248,7 +244,7 @@
 
       /*   Effect   */
       .parallax {
-        background-position: center center;
+        background-position: center;
 	background-size: cover;
         background-repeat: no-repeat;
         background-attachment: fixed;
@@ -261,7 +257,6 @@
 
       .overlay {
           display: block;
-          width: 100%;
           position: relative;
           overflow: hidden;
       }
