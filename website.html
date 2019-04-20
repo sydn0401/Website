@@ -52,17 +52,17 @@
       /****************/
 			
       [funfuntown] {
-        background-image: url("master/Minimalism.JPG");
+        background-image: url("Minimalism.JPG");
         height: 100%;
       }
 
       [the_musée_d_orsay] {
-        background-image: url("master/The Musée d'Orsay.jpg");
+        background-image: url("The Musée d'Orsay.jpg");
         height: 100%;
       }
 
       [danbo_in_paris] {
-        background-image: url("master/Danbo In Paris 2.jpg");
+        background-image: url("Danbo In Paris 2.jpg");
         height: 100%;
       }
 
@@ -164,7 +164,7 @@
           font-size   ease .3s;
       }
 	      
-       .container .overlay {
+      .container .overlay {
         font-size: 3vw;
         transition: 
           opacity     ease .3s,
@@ -249,7 +249,10 @@
       /*   Effect   */
       .parallax {
         position: relative;
-        background: center center / cover no-repeat fixed;
+        background-position: center center;
+	background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
       }
 			      
       .blend {
@@ -335,7 +338,7 @@
 
   <body>
 
-    <div class="parallax overlay" funfuntown>
+    <div funfuntown class="parallax overlay">
       <div class="caption" data-aos="fade-up">
         <span class="border">Minimalism</span>
       </div>
@@ -345,7 +348,7 @@
       <p>Make a list for the things you love</p>
     </div>
 
-    <div class="parallax overlay" the_musée_d_orsay>
+    <div the_musée_d_orsay class="parallax overlay">
       <div class="caption" data-aos="fade-up">
         <span class="border">Better decision</span>
       </div>
@@ -355,7 +358,7 @@
       <p>Love the things you own</p>
     </div>
 
-    <div class="parallax overlay" danbo_in_paris>
+    <div danbo_in_paris class="parallax overlay">
       <div class="caption" data-aos="fade-up">
         <span class="border" >Live with your love</span>
       </div>
@@ -365,7 +368,7 @@
       <p>Love the things you own</p>
     </div>
 
-    <div class="parallax overlay" funfuntown>
+    <div funfuntown class="parallax overlay">
       <div class="caption" data-aos="fade-up">
         <span class="border">Lighter life</span>
       </div>
