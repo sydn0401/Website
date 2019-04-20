@@ -52,17 +52,17 @@
       /****************/
 			
       [funfuntown] {
-        background: url("Minimalism.JPG");
+        background-image: url('Minimalism.JPG');
         height: 100%;
       }
 
       [the_musée_d_orsay] {
-        background: url("The Musée d'Orsay.jpg");
+        background-image: url('The Musée d'Orsay.jpg');
         height: 100%;
       }
 
       [danbo_in_paris] {
-        background: url("Danbo In Paris 2.jpg");
+        background-image: url('Danbo In Paris 2.jpg');
         height: 100%;
       }
 
@@ -148,12 +148,11 @@
         position: relative;
         color: white;
         box-shadow: 3px 3px 3px #888;
+	justify-content: center;
         transition: 
           all        ease .3s,
           width      ease .3s,
           box-shadow ease .3s;
-
-       
       }
 			
       /*  sass  */
@@ -233,7 +232,6 @@
         width: 280px;
         border: 10px solid #ffb53f;
         box-shadow: 3px 3px 2px #777;
-
       }
 
       // sass
@@ -363,7 +361,7 @@
       <p>Make a list for the things you love</p>
     </div>
 
-    <div the_musée_d_orsay class="parallax overlay">
+    <div class="parallax overlay" the_musée_d_orsay>
       <div class="caption" data-aos="fade-up">
         <span class="border">Better decision</span>
       </div>
