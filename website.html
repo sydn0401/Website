@@ -159,7 +159,7 @@
       }
 			
       /*  sass  */
-      .container .text{
+      .container .text {
         font-size: 3vw;
         opacity: 0;
         transition: 
@@ -332,13 +332,13 @@
 
   <body>
 
-    <div funfuntown class="parallax overlay"  style="height:450px;">
+    <div funfuntown class="parallax overlay">
       <div class="caption" data-aos="fade-up">
         <span class="border">Minimalism</span>
       </div>
     </div>
 
-    <div class="text-between-pictures" style="height:calc(100% - 450px);">
+    <div class="text-between-pictures">
       <p data-aos="flip-up">Make a list for the things you love</p>
     </div>
 
@@ -380,21 +380,6 @@
       </div>
     </div>
     
-    <!--div id = "yellow_toggle">
-      <div class ="text centered">
-        Minimalissimo
-      </div>
-    </div>
-    
-    <a href = "https://minimalissimo.com/" >
-      <div id="demoButton" data-aos="fade-right">
-        <div class="button">
-          <text>Minimalism</text>
-          <text class="inline_text">lifestyle</text>
-        </div>
-      </div>
-    </a-->
-		
   </body>
   
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -415,8 +400,8 @@
     function dragElement(elmnt) {
       var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   
-      function closeDragElement() {
-        // stop moving when mouse button is released:
+      function releaseDragElement() {
+        
         document.onmouseup = null;
         document.onmousemove = null;
       }
@@ -440,7 +425,7 @@
         // get the mouse cursor position at startup:
         pos3 = e.clientX;
         pos4 = e.clientY;
-        document.onmouseup = closeDragElement;
+        document.onmouseup = releaseDragElement;
         // call a function whenever the cursor moves:
         document.onmousemove = elementDrag;
       }
